@@ -6,17 +6,17 @@
   "homepage": "http://platformio.org/platforms/nxplpc",
   "license": "Apache-2.0",
   "engines": {
-    "platformio": "^3.0.0"
+    "platformio": "<5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/p3p/pio-nxplpc-arduino-lpc176x.git"
+    "url": "https://github.com/trouch/pio-nxplpc-arduino-lpc176x.git"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "http://dl.platformio.org/packages/manifest.json",
-    "https://raw.githubusercontent.com/p3p/pio-nxplpc-arduino-lpc176x/master/manifest.json"
+    "https://raw.githubusercontent.com/trouch/pio-nxplpc-arduino-lpc176x/master/manifest.json"
   ],
   "frameworks": {
     "arduino": {
@@ -27,7 +27,7 @@
   "packages": {
     "toolchain-gccarmnoneeabi": {
       "type": "toolchain",
-      "version": ">=1.60301.0"
+      "version": ">=1.60301.0,<1.80000.0"
     },
     "framework-arduino-lpc176x": {
       "type": "framework",
@@ -37,12 +37,17 @@
     "tool-openocd": {
       "type": "debugger",
       "optional": true,
-      "version": "~1.1000.0"
+      "version": "~2.1000.0"
     },
     "tool-pyocd": {
       "type": "debugger",
       "optional": true,
       "version": "~0.801.0"
+    },
+    "tool-jlink": {
+      "type": "uploader",
+      "optional": true,
+      "version": "^1.63208.0"
     }
   }
 }
